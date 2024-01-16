@@ -1,5 +1,7 @@
 LDDINC=$(PWD)/../include
-EXTRA_CFLAGS += -I$(LDDINC)
+EXTRA_CFLAGS += -I$(LDDINC) 
+#-Wall -Wextra -pedantic
+#CFLAGS = -Wall -Wextra -pedantic
 
 ifeq ($(KERNELRELEASE),)
 
@@ -10,7 +12,7 @@ ifeq ($(KERNELRELEASE),)
     PWD := $(shell pwd)
 
 modules:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+	$(MAKE) -C $(KERNELDIR)  M=$(PWD) modules
 
 modules_install:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
