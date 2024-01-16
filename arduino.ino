@@ -6,6 +6,7 @@ bool pressed = false;
 
 void setup() {
   Serial.begin(9600);
+  pinMode(pin_btn, INPUT);
 }
 
 void loop() {
