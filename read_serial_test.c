@@ -5,15 +5,13 @@
 #include <termios.h>
 #include <unistd.h>
 
-int serial_port;
 char buffer[2];
 char buffer_f[5];
 ssize_t bytes_read;
 void match_input();
-int my_atoi(char *);
+struct termios tty;
 int main() {
-  serial_port = open("/dev/ttyS0", O_RDWR); // Adjust the port as needed
-  struct termios tty;
+  int serial_port = open("/dev/ttyS0", O_RDWR); // Adjust the port as needed
 
   if (serial_port < 0) {
     perror("Error opening serial port");

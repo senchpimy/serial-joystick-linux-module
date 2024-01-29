@@ -1,5 +1,5 @@
 LDDINC=$(PWD)/../include
-EXTRA_CFLAGS += -I$(LDDINC) 
+EXTRA_CFLAGS += -I$(LDDINC) -I/usr/include -I/usr/include/linux
 #-Wall -Wextra -pedantic
 #CFLAGS = -Wall -Wextra -pedantic
 
